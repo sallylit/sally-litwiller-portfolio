@@ -1,0 +1,371 @@
+/***** BASE STYLES **********/
+body {
+font-family: 'Raleway', sans-serif;
+height: 100%;
+margin: 0 auto;
+max-width: 90%;
+padding: 1em 0;
+background-color: #f2f2f2;
+}
+
+/*** ADD WRAPPER ******/
+.grid{	
+	display: grid;
+	/*grid-template-columns: 330px 330px 330px;*/
+	grid-template-rows: 10% auto 10% auto 10% auto 10% auto 10%;
+	grid-gap: 1em;
+}
+
+/*.top, .about, .skills, .portfolio
+ {
+	padding: 1em;
+	height: auto;
+}*/
+
+header, footer{
+	grid-column: 1 / -1;
+	background: #eaeaea;
+	padding: 1em;
+	height: auto;
+}
+
+.top{
+	display: grid;
+	grid-row: 1;
+	grid-template-areas: 
+	"title nav nav"
+}
+
+.title{
+	grid-area: title;
+}
+
+.title h2{
+	font-family: 'Playfair Display', serif;
+	font-size: 2em;
+}
+
+nav{
+	display: grid;
+	list-style: none;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+	grid-area: nav;
+
+}
+
+nav a{
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #828282;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	grid-row:2;
+ 	 margin-bottom: 30px;
+ 	 padding: 30px;
+ 	 color: black;
+  	background: url('../img/hero-image.jpeg');
+  	background-size: cover;
+   	min-height: 600px;
+ }
+
+.header img{
+	max-width: 100%;
+}
+
+header h1{
+	font-family: 'Cherry Cream Soda', sans-serif;
+	font-size: 70px;
+	text-shadow: 2px 2px 7px white;
+
+}
+
+header h2{
+	font-family: 'Playfair Display', serif;
+	font-size: 43px;
+	color: black;
+	text-shadow: 2px 2px 7px white;
+}
+
+.about-title h2{
+	display: grid;
+	grid-row: 3;
+	grid-column: 1 / -1;
+	text-align: left;
+	font-family: 'Cherry Cream Soda', sans-serif;
+	color: #d26e86;
+	font-size: 34px;
+	text-shadow: 1px 1px 2px #111111;
+}
+
+.about{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-row: 4;
+	padding: 20px;
+	
+}
+
+.about .text{
+	grid-column: span 2;
+}
+
+
+.about p{
+	font-size: 20px;
+	line-height: 29px;
+	text-align: justify;
+}
+
+.about span{
+	font-weight: bold;
+}
+
+.about .image{
+	justify-self: center;
+
+}
+
+.about img{
+	border: 10px outset #d26e85;
+	max-height: 350px;
+}
+
+.skills-title h2{
+	display: grid;
+	grid-row: 5;
+	text-align: left;
+	font-family: 'Cherry Cream Soda', sans-serif;
+	color: #d26e86;
+	font-size: 34px;
+	padding-top: 20px;
+	text-shadow: 1px 1px 2px #111111;
+
+}
+
+.skills{
+	display: grid;
+	grid-row:6;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	justify-content: space-around;
+	padding: 20px;
+}
+
+.skill{
+	display: grid;
+	padding: 25px;
+	border: 1px solid white;
+	text-align: center;
+	box-shadow: 0 0 4px rgba(0,0,0,0.1);
+	background-color: #709eaf;
+
+}
+
+.skill h2{
+	display: grid;
+
+}
+
+.skill h3{
+	font-size: 24px;
+	color: white;
+	text-shadow: 1px 1px 3px #111111;
+}
+
+.skill p{
+	font-size: 20px;
+	text-align: justify;
+}
+
+.portfolios-title h2{
+	display: grid;
+	grid-row: 7;
+	text-align: left;
+	font-family: 'Cherry Cream Soda', sans-serif;
+	color: #d26e86;
+	font-size: 34px;
+	padding-top: 20px;
+	text-shadow: 1px 1px 2px #111111;
+}
+
+.portfolios{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+	grid-row: 8;
+	align-content: space-around;
+	padding: 30px;
+}
+
+.portfolio{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+	border: 1px solid white;
+	text-align: center;
+	box-shadow: 0 0 15px #cccccc;
+
+	
+}
+
+.portfolio h3{
+	font-size: 24px;
+}
+
+.portfolio p{
+	font-size:20px;
+	text-align: center;
+}
+
+#java a:link{
+	color: #709eaf;
+	text-decoration: none;
+	font-family: 'Cherry Cream Soda', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+#java a:hover{
+	color: #d26e86;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+/*
+#java a:visited{
+	color: #d26e86;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 15px;
+}*/
+/*.skills{
+	grid-row: 4;
+}
+
+.skills .design{
+	grid-column: 1;
+	grid-row: 4;
+}
+
+.skills .html{
+	grid-column: 2;
+	grid-row: 4;
+}
+
+.skills .css{
+	grid-column: 3;
+	grid-row: 4;
+}*/
+
+
+
+footer{
+	display: block;
+	grid-row: 9;
+	background-color: #b4cfd9;
+	padding: 20px;
+	
+
+}
+
+footer h2{
+	font-family: 'Cherry Cream Soda', cursive;
+	font-size: 30px;
+	}
+
+footer p{
+	font-family: 'Playfair Display', serif;
+	font-size: 25px;
+	line-height: 16px;
+}
+
+footer i{
+	padding-right: 20px;
+	color: black;
+}
+
+footer h4{
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	color: #d26e86;
+	line-height: 16px;
+	text-align: center
+}
+
+/*.grid > * {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}*/
+}
+
+
+
+@media (max-width: 600px){
+
+/* Title and Nave */
+
+.top{
+	display: grid;
+	grid-row: 1;
+	grid-template-areas: 
+	"title"
+	"nav" 
+	"nav"
+}
+
+
+header h2{
+	font-family: 'Playfair Display', serif;
+	font-size: 40px;
+	color: white;
+	text-shadow: 2px 2px 7px #111111;
+}
+
+
+}
+
+@media (max-width: 601px) {
+
+/* Title and Nav */
+
+.top{
+	display: grid;
+	grid-row: 1;
+	grid-template-areas: 
+	"title"
+	"nav nav"
+}
+
+header h2{
+	font-family: 'Playfair Display', serif;
+	font-size: 43px;
+	color: white;
+	text-shadow: 2px 2px 7px #111111;
+}
+
+
+
+}
+
+@media (min-width: 601px) and (max-width: 1431px){
+
+header h2{
+	color: white;
+	text-shadow: 2px 2px 7px #111111;
+}	
+
+}
